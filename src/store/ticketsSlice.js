@@ -9,7 +9,7 @@ export const fetchSearchId = createAsyncThunk('tickets/fetchSearchId', async (_,
       throw new Error(`${res.status}`);
     }
     const data = await res.json();
-    return data; // Возвращаем весь объект data, а не только data.searchId
+    return data; 
   } catch (err) {
     return rejectWithValue(err);
   }

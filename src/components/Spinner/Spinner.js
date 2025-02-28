@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Spinner.module.scss'; // Создайте файл Spinner.module.scss для стилей
+import styles from './Spinner.module.scss';
 
 function Spinner() {
   return (
