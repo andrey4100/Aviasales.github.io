@@ -21,10 +21,14 @@ function App() {
     dispatch(fetchSearchId());
   }, [dispatch]);
 
+
+
   useEffect(() => {
     if (!stopFetch && searchId) dispatch(fetchTickets());
   }, [dispatch, tickets, fetchStatus500, stopFetch, searchId]);
 
+
+  
   return (
     <div className={styles.app}>
       <Header />
