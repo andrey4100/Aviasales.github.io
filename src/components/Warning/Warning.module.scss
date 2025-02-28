@@ -1,0 +1,33 @@
+.n__warning {
+  margin: 5px;
+  padding: 25px 50px; 
+  color: #333;
+  border-radius: 5px;  
+  background: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  box-sizing: border-box;
+  border: 2px solid #f08d3c;
+  color: #f08d3c;
+
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 70px; 
+  min-height: 120px; 
+}
+
+.n__warning:before {
+  content: "";
+  display: inline-block;
+  width: 40px; 
+  height: 40px;
+  background-image: url('../../resourses/img/warning_icon.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 20px; 
+  top: 50%;
+  transform: translateY(-50%);
+}

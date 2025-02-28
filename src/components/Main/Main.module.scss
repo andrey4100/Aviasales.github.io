@@ -1,0 +1,14 @@
+.main {
+    grid-area: main;
+    display: grid;
+    gap: 10px;
+    grid-template-rows: 5vh min-content;
+    max-width: 500px;
+    margin-right: 15px;
+}
+
+@media (max-width: 570px)  {
+    .main {
+        margin-right: 10px;
+    }
+}

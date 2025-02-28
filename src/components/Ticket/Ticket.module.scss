@@ -1,0 +1,73 @@
+.ticket {
+    display: grid;
+    background-color: #fff;
+    max-width: 500px;
+    min-height: 185px;
+    padding: 20px 20px 20px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 8px 4px rgba(150, 155, 159, .2);
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr .5fr;
+        margin-bottom: 8px;
+        align-items: center;
+    }
+    &__price {
+        margin-bottom: auto;
+        font-size: 22px;
+        font-weight: 700;
+        color: #2196f3;
+        padding-top: 8px;
+    }
+    &__logo {
+        margin-left: auto;
+        object-fit: cover;
+        width: calc(50vw - 160px);
+        max-width: 99px;
+        min-width: 60px;
+    }
+    &__information {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    &__information:nth-child(2) {
+        margin-bottom: 10px; /* Или используйте другие единицы измерения, например, 1rem */
+      }
+    &__textGrey {
+        color: #a0b0b9;
+    }
+    &__text {
+       font-size: 14px;
+       font-weight: 600;
+    }
+}
+
+@media (max-width: 560px) {
+
+    .ticket__price {
+        font-size: 18px;
+    }
+    .ticket__textGrey {
+        font-size: 12px;
+    }
+    .ticket__text {
+       font-size: 12px;
+    }
+}
+
+
+@media (max-width: 460px) {
+
+    .ticket {
+        padding: 15px 15px 15px 15px;
+    }
+    .ticket__price {
+        font-size: 14px;
+    }
+    .ticket__textGrey {
+        font-size: 10px;
+    }
+    .ticket__text {
+       font-size: 10px;
+    }
+}

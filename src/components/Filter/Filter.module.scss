@@ -1,0 +1,100 @@
+.filter {
+    display: flex;
+    justify-content: right;
+    align-items: flex-start;
+    grid-area: filter;
+	padding-left: 15px;
+    &__container{
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        padding: 20px 0 20px 0;
+        width: 100%;
+        max-width: 232px;
+        max-height: 400px;
+		box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+		border-radius: 5px;
+    }
+    &__wrapper{
+      display: flex;
+      flex-direction: column;
+    }
+	&__label {
+		padding: 10px 20px 10px 20px;
+		&:hover {
+			background-color: #F1FCFF;
+		}
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
+    &__title {
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 100%;
+		padding: 0 20px 15px 20px;
+    }
+}
+
+.realCheckbox {
+	width: 0;
+	height: 0;
+	opacity: 0;
+	position: absolute;
+	z-index: -1;
+}
+
+.customCheckbox {
+	position: relative;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: #ffffff;
+    border: 1px solid #9abbce;
+	border-radius: 2px;
+	vertical-align: sub;
+	margin-right: 10px;
+}
+
+.customCheckbox::before {
+	content: '';
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	background-image: url('../../resourses/img/CheckMark.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 15%;
+	top: 20%;
+	display: none;
+	margin-top: 1px;
+}
+
+.realCheckbox:checked + .customCheckbox::before {
+	display: block;
+}
+
+.realCheckbox:checked + .customCheckbox {
+    border-color: #2196F3;
+}
+
+@media (max-width: 570px)  {
+
+	.filter{
+		padding-left: 10px;
+	}
+	.filter__container {
+		min-width: 100px;
+	}
+
+	.filter__title {
+		font-size: 11px;
+	}
+
+	.filter__text {
+		font-size: 12px;
+	}
+
+ }
+  
